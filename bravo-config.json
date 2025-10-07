@@ -1,0 +1,89 @@
+{
+  "projectName": "explori",
+  "appName": "explori",
+  "description": "Travel discovery app that helps users find local experiences, events, and adventures",
+  "version": "1.0.0",
+  "platform": "mobile",
+  "targetPlatforms": ["ios", "android"],
+  "entryPoint": "App.tsx",
+  "dimensions": {
+    "width": 393,
+    "height": 852,
+    "deviceType": "iPhone 14 Pro"
+  },
+  "bravo": {
+    "tags": {
+      "containers": "[container]",
+      "buttons": "[button]",
+      "texts": "[text]",
+      "inputs": "[input]",
+      "navigation": "[link:PageName]",
+      "binding": "[bind:fieldName]"
+    },
+    "navigation": {
+      "type": "bottom-tabs",
+      "pages": [
+        {
+          "name": "Home",
+          "component": "components/pages/HomePage.tsx",
+          "icon": "Home",
+          "route": "/"
+        },
+        {
+          "name": "Map",
+          "component": "components/pages/MapPage.tsx",
+          "icon": "Map",
+          "route": "/map"
+        },
+        {
+          "name": "AddPost",
+          "component": "components/pages/AddPostPage.tsx",
+          "icon": "Plus",
+          "route": "/add-post"
+        },
+        {
+          "name": "Planner",
+          "component": "components/pages/PlannerPage.tsx",
+          "icon": "Target",
+          "route": "/planner"
+        },
+        {
+          "name": "Saved",
+          "component": "components/pages/SavedPage.tsx",
+          "icon": "Bookmark",
+          "route": "/saved"
+        },
+        {
+          "name": "Profile",
+          "component": "components/pages/ProfilePage.tsx",
+          "icon": "User",
+          "route": "/profile"
+        }
+      ]
+    },
+    "features": {
+      "authentication": true,
+      "push_notifications": true,
+      "geolocation": true,
+      "camera": true,
+      "payments": true,
+      "social_features": true
+    }
+  },
+  "styling": {
+    "framework": "tailwindcss",
+    "theme": "custom",
+    "colors": {
+      "primary": "#ff6b35",
+      "background": "#fdfcfb",
+      "text": "#1f2937",
+      "secondary": "#64748b"
+    }
+  },
+  "dependencies": {
+    "ui_library": "shadcn/ui",
+    "icons": "lucide-react",
+    "notifications": "sonner",
+    "forms": "react-hook-form"
+  }
+}
